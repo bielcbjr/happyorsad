@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaporwave Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"> <!-- Link para a fonte Poppins -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff77ff, #00bcd4); /* Fundo com gradiente */
+            color: #ffffff; /* Texto branco */
+            font-family: 'Courier New', Courier, monospace; /* Fonte padrão */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+            height: 100vh; /* 100% da altura da tela */
+            margin: 0; /* Remove margens padrão */
+            text-align: center; /* Centraliza todo o texto na página */
+        }
+        h1 {
+            font-size: 5em; /* Tamanho do texto do título */
+            margin: 20px; /* Margem em torno do título */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra do texto */
+        }
+        a {
+            color: #ffffff; /* Cor do link igual ao texto */
+            text-decoration: none; /* Remove o sublinhado */
+        }
+        a:hover {
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
+        button {
+            background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+            color: #ffffff; /* Texto do botão em branco */
+            border: 2px solid #00ffcc; /* Borda neon */
+            padding: 15px 30px; /* Preenchimento do botão */
+            font-size: 1.5em; /* Tamanho do texto do botão */
+            border-radius: 5px; /* Bordas arredondadas do botão */
+            margin: 10px; /* Margem ao redor do botão */
+            transition: background-color 0.3s, border-color 0.3s; /* Transições suaves para cor do botão */
+        }
+        button:hover {
+            background-color: #00ffcc; /* Muda a cor de fundo ao passar o mouse */
+            border-color: #ff007f; /* Muda a cor da borda ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <h1><a id="hello">Hello</a>, how are you feeling <a id="today">today</a>?</h1>
+    <button onclick="playHappySoundAndRedirect()">Happy 😊</button>
+    <button onclick="playOhNoSoundAndRedirect()">Sad 😢</button>
+
+    <!-- Adiciona a tag audio para os sons -->
+    <audio id="excellentSound" src="excellent.mp3"></audio>
+    <audio id="ohnoSound" src="ohno.mp3"></audio>
+    <audio id="warpSound" src="warp.mp3"></audio>
+    <audio id="perfectSound" src="perfect.mp3"></audio> <!-- Som perfeito -->
+
+    <script>
+        // Adiciona um evento de clique ao elemento "Hello"
+        document.getElementById("hello").onclick = function() {
+            // Toca o som
+            document.getElementById("warpSound").play();
+            // Redireciona para a página do Easter Egg após o som começar
+            setTimeout(function() {
+                window.location.href = "easteregg.html"; 
+            }, 1000); // 1 segundo de delay antes de redirecionar
+        }
+
+        // Função para tocar o som e redirecionar no botão "Happy"
+        function playHappySoundAndRedirect() {
+            document.getElementById("excellentSound").play();
+            setTimeout(function() {
+                location.href = 'happy.html'; 
+            }, 1000); // 1 segundo de delay
+        }
+
+        // Função para tocar o som e redirecionar no botão "Sad"
+        function playOhNoSoundAndRedirect() {
+            document.getElementById("ohnoSound").play();
+            setTimeout(function() {
+                location.href = 'sad.html'; 
+            }, 1000); // 1 segundo de delay
+        }
+
+        // Adiciona um evento de clique ao elemento "today"
+        document.getElementById("today").onclick = function() {
+            document.getElementById("perfectSound").play(); // Toca o som ao clicar
+            setTimeout(function() {
+                window.location.href = "sobre.html"; // Redireciona para a página sobre você
+            }, 1000); // 1 segundo de delay antes de redirecionar
+        }
+    </script>
+</body>
+</html>

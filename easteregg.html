@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Egg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"> <!-- Link para a fonte Poppins -->
+    <style>
+        body {
+            background-color: #ffccff; /* Cor de fundo suave, rosa claro */
+            color: #333; /* Texto escuro para contraste */
+            font-family: 'Poppins', sans-serif; /* Fonte padrão */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+            height: auto; /* Permite que a altura se ajuste ao conteúdo */
+            margin: 0; /* Remove margens padrão */
+            text-align: center; /* Centraliza todo o texto na página */
+            padding: 20px; /* Adiciona um padding ao redor do conteúdo */
+        }
+        h1 {
+            font-size: 4em; /* Tamanho do texto do título aumentado */
+            margin: 20px; /* Margem em torno do título */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra do texto */
+        }
+        p {
+            font-size: 2em; /* Tamanho do texto do parágrafo aumentado */
+            margin: 10px; /* Margem em torno do parágrafo */
+        }
+        .video-container {
+            border: 8px solid #ff007f; /* Borda neon rosa aumentada */
+            border-radius: 10px; /* Bordas arredondadas */
+            overflow: hidden; /* Esconde partes do vídeo que ultrapassam as bordas */
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.5); /* Sombra ao redor do vídeo */
+            width: 90%; /* Largura da div para o vídeo */
+            max-width: 800px; /* Largura máxima da div para o vídeo */
+            margin-top: 20px; /* Margem superior para separar do texto */
+        }
+        iframe {
+            width: 100%; /* Largura do iframe */
+            height: 555px; /* Altura do iframe para aspecto normal do YouTube */
+        }
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px; /* Menos padding em dispositivos móveis */
+            }
+            h1 {
+                font-size: 3em; /* Tamanho do título reduzido */
+            }
+            p {
+                font-size: 1.5em; /* Tamanho do parágrafo reduzido */
+            }
+            .video-container {
+                width: 100%; /* Largura total para o container do vídeo */
+                max-width: none; /* Remove largura máxima para que o vídeo ocupe toda a largura */
+                margin: 30px 0; /* Aumenta a margem vertical entre os vídeos */
+            }
+            iframe {
+                height: 315px; /* Altura do iframe reduzida para melhor proporção */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>VOCÊ DESCOBRIU UM EASTER EGG!</h1>
+    <p>APRECIE AGORA OS MELHORES VIDEOS DA INTERNET BRASILEIRA:</p>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/SGcstfDJNLY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/2sm6pTaid0Y" frameborder="0" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
